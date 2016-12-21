@@ -1,7 +1,7 @@
  // AngularJS Stuff
 var app = angular.module('app');
 app.controller('NavigationController', ['$scope',function($scope, beer) {
-    $scope.pages = ["home",
+    $scope.pages = ["index",
         "beer",
         "wine",
         "liquor",

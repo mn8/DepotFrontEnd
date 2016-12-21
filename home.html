@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <script src="./js/utility.js"></script> 
+	<!-- css references -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/sidebar.css" rel="stylesheet">
+
+
+    <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+    <!-- Include the AngularJS routing library -->
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script> 
+     <!-- Modules -->
+	<script src="./js/app.js"></script>
+	 <!-- Controllers -->
+    <script src="./js/Controllers/MainController.js"></script>
+    <script src="./js/Controllers/NavigationController.js"></script>
+    <!--<script src="./js/Controllers/BeerController.js"></script>-->
+    <!--filers-->
+    
+    <!-- Services -->
+	<script src="./js/Services/beer.js"></script>
+	<script src="./js/Services/liquor.js"></script>
+	<script src="./js/Services/wine.js"></script>
+	 <!-- Directives -->
+	<!--<script src="./js/Directives/navigation.html"></script> -->
+	<script src="./js/Directives/dirPagination.js"></script>
+	<!--external -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<title>Home</title>
+</head>
+<body>
+<div ng-controller="NavigationController">
+		<div navigation-directive></div>
+</div>
+<!-- <div id = "snow">	
+</div> -->
+<div  id = "landing" class="section">
+</div>
+<div class ="data" ng-controller="MainCtrl">
+<div id = "beer" class="container section" >
+	<div class = "row header">
+		<h1 class="col-xs-12">Beer</h1><br>
+	</div>
+	<div class="container blog">
+		<ul class="list-inline">
+ 			<li ng-repeat="producer in producers" class="col-lg-4 col-md-6  col-xs-6">{{ producer.name | capitalize}}</li>
+		</ul>
+	</div>
+</div>
+<div id = "liquor" class="container section">
+
+	<div class = "row header">
+		<h1 class="col-xs-12">Liquor</h1><br>
+	</div>
+	<div class="container blog" >
+		<ul class="list-inline">
+ 			<li ng-repeat="liquor in liquors" class="col-lg-6 col-md-6  col-xs-6">{{ liquor.type | capitalize}}</li>
+		</ul>
+	</div>
+</div>
+
+<div id="wine" class = "container section">	
+	<div class = "row header">	
+			<h1 class="col-xs-12" >Wine</h1><br>
+	</div>
+	<div div class="container blog" >	
+		<ul class="list-inline">	
+			<li ng-repeat="wine in wines"  class="col-lg-4 col-md-6  col-xs-6">{{wine.type}}	</li>
+		</ul>
+	</div>
+
+</div>
+<!--  id="info" -->
+<div class="container-fluid section">
+		<div class = "row header">
+				<h1 class="col-xs-12">Contact Address</h1><br>
+		</div>
+		<div class="row text-center over_image ">
+			<div class="col-sm-4 col-xs-4 first-box">
+	        	<h1><span class="glyphicon glyphicon-earphone"></span></h1>
+	        	<h3>Phone</h3>
+	        	<p>269-639-8045</p><br>
+	    	</div>
+	    	<div class="col-sm-4 col-xs-4 second-box">
+	    	    <h1><span class="glyphicon glyphicon-home"></span></h1>
+	    	    <a href="https://www.google.com/maps/place/555+Dyckman+Ave,+South+Haven,+MI+49090/@42.4066516,-86.2738031,17z/data=!3m1!4b1!4m5!3m4!1s0x8810aca40708e6b3:0xbd6c875cd7697223!8m2!3d42.4066516!4d-86.2716144">
+	    	    <h3>Location</h3>
+	    	    <p>555 Dykeman Road</p> </a><br>
+	    	</div>
+	    	<div class="col-sm-4 col-xs-4 third-box">
+	    	    <h1><span class="glyphicon glyphicon-send"></span></h1>
+	    	    <h3>E-mail</h3>
+	    	    <p>shavendepot@frontier.com</p><br>
+	    	</div>
+	    	<div class="fourth-box">
+	    		<h1 class = "hidden-md"><span class="glyphicon glyphicon-time"></span></h1>
+	    	    <h3>Hours</h3>
+	    	    <table class = "table" id="hours">
+	    	    	<thead>
+	    	    		<tr class = "row">
+	    	    			<th class="col-sm-2"></th>
+	    	    			<th class="col-sm-1">Monday</th>
+	    	    			<th class="col-sm-1">Tuesday</th>
+	    	    			<th class="col-sm-1">Wendsday</th>
+	    	    			<th class="col-sm-1">Thursday</th>
+	    	    			<th class="col-sm-1">Friday</th>
+	    	    			<th class="col-sm-1">Saturday</th>
+	    	    			<th class="col-sm-1">Sunday</th>
+	    	    		</tr>
+	    	    	</thead>
+	    	    	<tbody class = "hours">
+	    	    		<tr  class = "row">
+	    	    			<td class="col-sm-2">Store</td>
+	    	    			<td class="col-sm-1">10-9</td>
+	    	    			<td class="col-sm-1">10-9</td>
+	    	    			<td class="col-sm-1">10-9</td>
+	    	    			<td class="col-sm-1">10-9</td>
+	    	    			<td class="col-sm-1">10-12</td>
+	    	    			<td class="col-sm-1">10-12</td>
+							<td class="col-sm-1">10-9</td>
+	    	    		</tr>
+		
+	    	    			<tr  class = "row">
+	    	    			<td class="col-sm-2">Deli</td>
+	    	    			<td class="col-sm-1">10-3</td>
+	    	    			<td class="col-sm-1">10-3</td>
+	    	    			<td class="col-sm-1">10-3</td>
+	    	    			<td class="col-sm-1">10-3</td>
+	    	    			<td class="col-sm-1">10-5</td>
+	    	    			<td class="col-sm-1">10-5</td>
+							<td class="col-sm-1">Closed</td>
+	    	    		</tr>
+	    	    	</tbody>
+	    	    </table>
+	    	</div>
+		</div>
+</div>
+
+
+
+<div id = "map">
+	
+
+</div>
+<div id = "deli"></div>
+
+</body>
+</html>

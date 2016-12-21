@@ -1,0 +1,30 @@
+<div class="row">
+    <label  class="col-lg-12" id="search_label" for="search">Search:</label>
+    <input  class="col-lg-4" class="form-control"  ng-model="q" id="search" placeholder="Filter text">
+</div>        
+<div class = "table-responsive">
+    <table class = "table"> 
+        <thead>
+            <tr class = "row">    
+                <th><button type = "button"  class="btn btn-default" ng-click="sortProducts('name')">Name <span class="caret"></span></button></th> 
+                <th><button type = "button"  class="btn btn-default" ng-click="sortProducts('type')">Brand <span class="caret"></span></button></th> 
+                <th><button type = "button"  class="btn btn-default" ng-click="sortProducts('price')">Price <span class="caret"></span></button></th> 
+            </tr>
+        </thead>
+        <tbody> 
+            <tr dir-paginate="drink in drinks | filter:q | itemsPerPage: 30" current-page="currentPage" class = "row">            
+                <td class="col-lg-4">
+                     <h4 >{{ drink.name | capitalize}}</h4>
+                </td>
+                <td class = "col-lg-4 hidden-sm-down">
+                    <h4>{{ drink.type | capitalize }}</h4>
+                </td>
+                <td class = "col-lg-4">
+                    <h4>{{ drink.price | currency }}</h4>
+                </td>
+            </tr>
+        
+        </tbody>
+    </table>  
+</div>
+<dir-pagination-controls></dir-pagination-controls>

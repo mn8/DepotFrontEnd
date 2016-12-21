@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <!-- css references -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/full-slider.css" rel="stylesheet">
+
+    <title></title>
+</head>
+<body ng-controller="MainCtrl">
+
+<!-- NAVIGATION  -->
+    <nav class="navbar navbar-default navbar-collapse" role="navigation">       
+        <div class="container">
+            <div class="col-lg-12">
+                <h1>Welcome To The Depot!</h1>
+            </div>
+            <div class="col-sm-12">
+                <p>We Have Your Spirit!</p>
+            </div>
+            <ul class="nav nav-justified">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="beer.html">Beer</a></li>
+                <li><a href="wine.html">Wine</a></li>
+                <li><a href="liquor.html">Liquor</a></li>
+                <li><a href="groceries.html">Groceries</a></li>
+                <li><a href="soda.html">Soda</a></li>
+                <li><a href="deli.html">Deli</a></li>
+                <li><a href="tobacco.html">Tobacco</a></li>
+                <li><a href="index.html">Info</a></li>
+            </ul>
+        </div>
+    </nav>
+<!-- NAVIGATION  -->
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+
+                <!-- Set the first background image using inline CSS below. -->
+            <div class="item active">
+                <div class="fill" style="background-image:url('./css/images/beerImg.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Choose frome our large variety of beers</h2>
+                </div>
+            </div>
+
+            <div class="item" ng-repeat = "carouselImage in carouselImages">
+
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('{{ carouselImage.image }}');"></div>
+                <div class="carousel-caption">
+                    <h2>{{ carouselImage.caption }}</h2>
+                </div>
+            </div>
+
+
+          <!--   <div class="item">
+
+                <!-- Set the second background image using inline CSS below.
+                <div class="fill" style="background-image:url('./css/images/wineImg.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div> -->
+           <!--  <div class="item">
+                <!-- Set the third background image using inline CSS below. 
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+
+    <!-- sections -->
+    <div class="container">
+        <div class="col-sm-12"> 
+            <h4>Contact Info</h4>
+            <div class="well well-sm">269-639-8045</div>
+        </div>
+        <div class="col-sm-12">
+            <h4>Hours</h4>
+                <div class="col-sm-3">Monday - Thursday</div>
+                <div class="col-sm-3">Friday</div>
+                <div class="col-sm-3">Saturday</div>
+                <div class="col-sm-3">Sunday</div>
+                <!-- Hours -->
+                <div class="col-sm-3">10-12</div>
+                <div class="col-sm-3">10-12</div>
+                <div class="col-sm-3">10-12</div>
+                <div class="col-sm-3">10-12</div>
+        </div>
+    </div>
+</body>
+
+
+    <script src="./js/angular.min.js"></script>
+     <!-- Include the AngularJS routing library -->
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+     <!-- Modules -->
+    <script src="./js/app.js"></script>
+     <!-- Controllers -->
+    <script src="./js/Controllers/MainController.js"></script>
+     <!-- Services -->
+    <script src="./js/Services/beer.js"></script>
+     <!-- Directives -->
+    <script src="./js/Directives/navigation.js"></script>
+    <!--external -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+</html>

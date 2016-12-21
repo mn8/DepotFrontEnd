@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<!-- css references -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+
+    <script src="./js/angular.min.js"></script>
+    <!-- Include the AngularJS routing library -->
+    <!--<script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script> -->
+     <!-- Modules -->
+	<script src="./js/app.js"></script>
+	 <!-- Controllers -->
+    <script src="./js/Controllers/MainController.js"></script>
+     <script src="./js/Controllers/GroceriesController.js"></script>
+
+    <!--filers-->
+    
+    <!-- Services -->
+	<script src="./js/Services/groceries.js"></script>
+	 <!-- Directives -->
+	<script src="./js/Directives/navigation.js"></script>
+	<script src="./js/Directives/dirPagination.js"></script>
+	<!--external -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+	<title>Groceries</title>
+</head>
+<body>
+<!-- NAVIGATION  -->
+    <nav class="navbar navbar-default navbar-collapse" role="navigation">       
+        <div class="container">
+            <div class="col-lg-12">
+                <h1>Welcome To The Depot!</h1>
+            </div>
+            <div class="col-sm-12">
+                <p>We Have Your Spirit!</p>
+            </div>
+            <ul class="nav nav-justified">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="beer.html">Beer</a></li>
+                <li><a href="wine.html">Wine</a></li>
+                <li><a href="liquor.html">Liquor</a></li>
+                <li><a href="groceries.html">Groceries</a></li>
+                <li><a href="soda.html">Soda</a></li>
+                <li><a href="deli.html">Deli</a></li>
+                <li><a href="tobacco.html">Tobacco</a></li>
+                <li><a href="index.html">Info</a></li>
+            </ul>
+        </div>
+    </nav>
+<!-- NAVIGATION  -->
+
+
+    <div class="container" ng-controller="GroceriesController"  >
+
+        <div class="panel panel-primary">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Choose from a large vairity of beer with build your own anything pack. </div>
+          <div class="panel-body">
+            <p>
+                The Depot allows you to purchase any beer in the store as a single. Want to try and new beer but don't want to buy six of them? No problem, just buy one!
+            </p>
+          </div>
+        </div>
+         <div class="col-xs-4">
+              <label for="search">Search:</label>
+              <input ng-model="q" id="search" class="form-control" placeholder="Filter text">
+           </div>
+        <dir-pagination-controls></dir-pagination-controls>
+        <table class ="table" dir-paginate="type in types | filter:q | itemsPerPage: pageSize" current-page="currentPage">
+                <thead>
+                    <tr>    
+                        <th>    
+                            <h1 class="col-lg-10">{{type.type}}</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat ="grocery in type.grocery"> 
+                        <td>{{grocery.product.name}}</td>
+                        <td>{{grocery.product.price}}</td>
+
+                    </tr>
+                </tbody>
+
+        </table>
+        <dir-pagination-controls></dir-pagination-controls>
+</div>
+
+
+
+</body>

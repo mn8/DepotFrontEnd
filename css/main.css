@@ -1,0 +1,182 @@
+#directory{
+	position: fixed;
+	z-index: 10;
+}
+
+#search{
+	margin-left: 22px;
+}
+#search_label{
+	padding-left: 20px;
+
+}
+#landing{
+    /* The image used */
+
+    /* Create the parallax scrolling effect */
+    background: url(../images/Depot.png) no-repeat center center fixed;
+   	margin:0;
+    padding:0;
+   	height:1224px;
+   	min-width: 100%;
+
+
+}
+/*#test{
+	position: relative;
+	height:0%;
+
+}*/
+#info{
+    /* Create the parallax scrolling effect */
+    background: url(../images/img_5619.jpg) no-repeat center center fixed;
+   	min-height:  1024px;
+   	min-width: 100%;
+    z-index: 2;
+
+}
+#beer{
+	background: url(../images/beer3.jpg) no-repeat center center fixed;
+   	min-height:  100%;
+   	min-width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 3;
+
+}
+#liquor{
+	background: url(../images/alcohol.png) no-repeat center center fixed;
+   	min-height:  100%;
+   	min-width: 100%;
+  	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 4;
+
+}
+#wine{
+  background: url(../images/wine.png) no-repeat center center fixed;
+    min-height:  100%;
+    min-width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 5;
+
+}
+#deli{
+    background: url(../images/Deli.jpg) no-repeat center center fixed;
+    min-height:  100%;
+    min-width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 6;
+
+}
+#drink{
+    background: url(../images/drink.jpg) no-repeat center center fixed;
+    min-height:  100%;
+    min-width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 7;
+
+}
+#tobacco{
+      background: url(../images/tobacco.jpg) no-repeat center center fixed;
+    min-height:  100%;
+    min-width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 3;
+}
+#hours{
+	font-size: 24px;
+}
+.content{
+	background-color: white;
+}
+.blog{
+	background:white;
+	font-size: 24px;
+}
+.narrow{
+	margin-left: 15%;
+
+}
+.parallax{
+	width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+.hours{
+	list-style: none;
+	text-align: left;
+}
+.over_image{
+/*	position: absolute; */
+	z-index: 1; 
+	top: 0; 
+	left: 0;
+}
+.top-buffer{
+	margin-top: 30em;
+}
+.header{
+	background: #D9CBBA;
+	text-align: center;
+}
+.first-box{padding:10px;background:#8A93A6;}
+.second-box{padding:10px; background:#F2E5D5;}
+.third-box{padding:10px;background:#8A93A6;}
+.fourth-box{padding:10px;background:#A69B8F;}
+
+#snow{
+  background: none;
+  font-family: Androgyne;
+  background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:2;
+  -webkit-animation: snow 10s linear infinite;
+  -moz-animation: snow 10s linear infinite;
+  -ms-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+} 
+/*style="transform: translate3d(0px, 0px, 0px);*/

@@ -23,7 +23,7 @@
     </nav> -->
 <div id="mySidenav" class="sidenav" ng-repeat="page in pages">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a ng-repeat="page in pages" href="{{page}}.html">{{page}}</a>>
+  <a ng-repeat="page in pages track by $index" href="{{page}}.html">{{page}}</a>>
 </div>
 <button id="directory"  onclick="openNav()"> 
         <h1><span class="glyphicon glyphicon-list "></span></h1>        
